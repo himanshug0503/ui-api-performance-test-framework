@@ -19,7 +19,14 @@ Docker Execution
 
 Future Enhancements
 
+Roadmap
 
+[x] UI Automation
+[ ] API Automation
+[ ] Jenkins Pipeline
+[ ] Dockerized Runs
+[ ] JMeter Performance Suite
+[ ] Allure Reporting
 
 ui-api-performance-test-framework/
 │
