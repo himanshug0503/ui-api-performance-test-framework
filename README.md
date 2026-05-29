@@ -1,70 +1,120 @@
 # ui-api-performance-test-framework
-Scalable test automation framework using Playwright + TypeScript featuring POM, data-driven testing, CI/CD with Jenkins, Dockerized execution, API and performance testing extensions.
 
-Overview
+# UI API Performance Test Framework
 
-Tech Stack
+A scalable and maintainable test automation framework built with **Playwright + TypeScript**, designed to demonstrate modern automation practices including UI, API, and Performance Testing.
 
-Project Architecture
+## Features
 
-Setup
+- UI Automation using Playwright and Page Object Model (POM)
+- API Automation using ReqRes and JSONPlaceholder APIs
+- Data-Driven Testing with JSON and Excel
+- Parallel Execution and Retry Mechanism
+- Allure Reporting with Screenshots and Videos
+- CI/CD Integration using Jenkins and GitHub Actions
+- Dockerized Test Execution
+- Performance Testing using JMeter
+- Environment-Based Configuration
+- Reusable Utilities, Fixtures, and Custom Logging
 
-Run Tests
+## Automated Applications
 
-Reports
+### OpenCart
 
-CI/CD Pipeline
+- Login & Authentication
+- Product Search
+- Add to Cart
+- Checkout Flow
+- Order History Validation
 
-Docker Execution
+### OrangeHRM
 
-Future Enhancements
+- Employee Management
+- Leave Management
+- Admin Module
+- File Upload Validation
+- Dynamic Tables & Search Filters
 
-Roadmap
+## Project Goals
 
-[x] UI Automation
-[ ] API Automation
-[ ] Jenkins Pipeline
-[ ] Dockerized Runs
-[ ] JMeter Performance Suite
-[ ] Allure Reporting
+This framework showcases an enterprise-style automation solution that combines UI, API, and Performance Testing into a single repository while following industry best practices for scalability, maintainability, and CI/CD readiness.
+
+## Documentation
+
+- [Framework Architecture](docs/ARCHITECTURE.md)
+- [Setup Guide](docs/SETUP.md)
+- [CI/CD Pipeline](docs/CI-CD.md)
+- [Docker Execution](docs/DOCKER.md)
+- [Reporting](docs/REPORTING.md)
+
+## Roadmap
+
+- [ ] UI Automation
+- [ ] API Automation
+- [ ] Data-Driven Testing
+- [ ] Excel Integration
+- [ ] Jenkins Pipeline
+- [ ] GitHub Actions
+- [ ] Dockerized Execution
+- [ ] Allure Reporting
+- [ ] JMeter Performance Testing
+- [ ] Parallel Execution
+- [ ] Database Validation
+- [ ] Visual Testing
+- [ ] Kubernetes Integration
+- [ ] Accessibility Testing
 
 ui-api-performance-test-framework/
 │
 ├── .github/
-│   └── workflows/
-│       └── ci.yml
+│ └── workflows/
+│ └── ci.yml
+│
+├── docs/
+│ ├── ARCHITECTURE.md
+│ ├── SETUP.md
+│ ├── EXECUTION.md
+│ ├── CI-CD.md
+│ ├── DOCKER.md
+│ └── PERFORMANCE.md
 │
 ├── src/
-│   ├── pages/
-│   │   ├── LoginPage.ts
-│   │   ├── DashboardPage.ts
-│   │   ├── ExpensePage.ts
-│   │
-│   ├── components/
-│   │   ├── Modal.ts
-│   │   └── Navbar.ts
-│   │
-│   ├── fixtures/
-│   │   └── testFixtures.ts
-│   │
-│   ├── utils/
-│   │   ├── apiClient.ts
-│   │   ├── testData.ts
-│   │   └── logger.ts
-│   │
-│   └── data/
-│       └── expenses.json
+│ ├── pages/
+│ │ ├── opencart/
+│ │ └── orangehrm/
+│ │
+│ ├── api/
+│ │ ├── reqres/
+│ │ ├── jsonplaceholder/
+│ │ └── opencart/
+│ │
+│ ├── components/
+│ ├── fixtures/
+│ ├── utils/
+│ │
+│ ├── data/
+│ │ ├── json/
+│ │ └── excel/
+│ │
+│ └── config/
 │
 ├── tests/
-│   ├── smoke/
-│   ├── regression/
-│   └── api/
-│
-├── docker/
-│   └── Dockerfile
+│ ├── ui/
+│ │ ├── opencart/
+│ │ └── orangehrm/
+│ │
+│ ├── api/
+│ ├── integration/
+│ └── performance/
 │
 ├── jmeter/
+├── docker/
+├── reports/
 │
 ├── Jenkinsfile
+├── Dockerfile
+├── docker-compose.yml
 ├── playwright.config.ts
+├── package.json
+├── tsconfig.json
 └── README.md
